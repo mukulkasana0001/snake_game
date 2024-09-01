@@ -1,0 +1,174 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background: url("../bg.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    color: #c11b1b;
+}
+#hiscoreBox{
+    position: absolute;
+    top: 60px;
+    right: 150px;
+    font-size: 39px;
+    font-weight: bold;
+    color: #c11b1b;
+}
+#board{
+    /* background: linear-gradient(#76b576,#c9c98b); */
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid rgb(251, 5, 5);
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    opacity: 0.5;
+}
+.head{
+    background: linear-gradient(black,#c11b1b);
+    /* border: 4px solid black; */
+    transform: scale(1.02);
+    border-radius: 12px;
+    /* border-top: 7px solid white; */
+    /* border-bottom: 7px solid white; */
+    border-top-left-radius:80px ;
+    border-top-right-radius:80px ;
+    border-bottom-right-radius:80px ;
+    border-bottom-left-radius:80px ;
+
+
+    animation: mukul1;
+            animation-duration: 0.0001s;
+            animation-iteration-count: infinite;
+    
+   
+}
+.snake{
+    background-color: rgb(245, 251, 0) ;
+    border: .25vmin solid rgb(227, 159, 31);
+    /* border-radius: 12px; */
+
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+    border-bottom-left-radius:20px ;
+}
+.food{
+
+    /* background-color:rgb(245, 251, 0) ; */
+    border: .25vmin solid #f90b0b;
+    /* border-radius: 100px; */
+
+    border-top-left-radius:100px ;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:80px ;
+    border-bottom-left-radius:10px ;
+
+
+    animation: mukul2;
+            animation-duration: 0.99s;
+            animation-iteration-count: infinite;
+
+}
+
+
+
+
+
+/* #foo{
+    
+    background-color:rgb(245, 251, 0) ;
+    border: .25vmin solid #f90b0b;
+   
+
+    border-top-left-radius:100px ;
+    border-top-right-radius:10px ;
+    border-bottom-right-radius:80px ;
+    border-bottom-left-radius:10px ;
+    height: 30px ;
+    width: 30px;
+    position: absolute;
+    top: 9px;
+    left:100px
+} */
+
+
+
+@keyframes mukul1 {
+    0% {
+        border-top: 4px solid white;
+        border-bottom: 4px solid white;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+
+}
+25% {
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+
+50% {
+    border-top: 2px solid white;
+        border-bottom: 2px solid white;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+}
+
+75% {
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+100% {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+border-right: 5px solid black;
+border-left: 5px solid black;
+}
+   }
+ 
+
+
+
+
+   @keyframes mukul2 {
+    0% {
+        background-color:rgb(245, 220, 0) ;
+
+}
+25% {
+    background-color:rgb(3, 3, 2) ;
+}
+
+
+50% {
+    background-color:rgb(0, 0, 0) ;
+}
+
+75% {
+    background-color:rgb(0, 0, 0) ;
+}
+
+100% {
+    background-color:rgb(0, 0, 0) ;
+}
+   }
